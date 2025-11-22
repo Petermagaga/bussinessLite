@@ -3,7 +3,7 @@ from .database import Base, engine
 from .routers import customers, tasks, analytics
 from . import auth
 from  bizpilot.database import Base,engine
-from backend.bizpilot.routes import authi,customer,task
+from backend.bizpilot.routes import analytic, authi,customer,task
 
 Base.metadata.create_all(bind=engine)
 
@@ -20,3 +20,4 @@ Base.metadata.create_all(bind=engine)
 app.include_router(authi.router)
 app.include_router(customer.router)
 app.include_router(task.router)
+app.include_router(analytic.router)
